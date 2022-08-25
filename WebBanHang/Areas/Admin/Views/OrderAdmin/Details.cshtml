@@ -1,0 +1,71 @@
+﻿@model WebBanHang.Context.Order_2119110325
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:3500px; margin-left:50px;">
+        <article class="card-body">
+            <div class="content-wrapper">
+                <div class="form-horizontal" style="width :100%">
+                    <h4>Trang quản lý đơn hàng</h4>
+
+
+                    <div>
+                        <h4>Chi tiết đơn hàng</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Name)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Price)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Price)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Status)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Status)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.CreatedOnUtc)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.CreatedOnUtc)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.UserId)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.UserId)
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <p>
+
+                        <button> @Html.ActionLink("Quay lại", "Index")</button>
+
+
+                    </p>
+                </div>
+        </article>
+    </div>
+</section>

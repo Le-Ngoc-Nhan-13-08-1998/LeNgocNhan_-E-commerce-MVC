@@ -1,0 +1,78 @@
+﻿@model WebBanHang.Context.Users_2119110325
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:5500px; margin-left:50px;">
+        <article class="card-body">
+            <div class="content-wrapper">
+                <header class="mb-4"><h4 class="text-danger">Trang quản lý người dùng</h4></header>
+                <div class="form-group">
+                    <div>
+                        <h4>Trang thông tin người dùng</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.UserId)
+
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.UserId)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FirstName)
+
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.FirstName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LastName)
+
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LastName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Email)
+
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Email)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Password)
+
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Password)
+                            </dd>
+
+
+
+
+
+                        </dl>
+                    </div>
+                    <p>
+                        <button> @Html.ActionLink("Quay lại", "Index")</button>
+
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

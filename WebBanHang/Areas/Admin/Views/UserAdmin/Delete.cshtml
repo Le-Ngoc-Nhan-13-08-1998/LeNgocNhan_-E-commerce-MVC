@@ -1,0 +1,85 @@
+﻿@model WebBanHang.Context.Users_2119110325
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:5500px; margin-left:50px;">
+        <article class="card-body">
+            <div class="content-wrapper">
+                <header class="mb-4"><h4 class="text-danger">Trang quản lý người dùng</h4></header>
+                <div class="form-group">
+                    <h3>Bạn có muốn xoá thông tin này không</h3>
+
+                    <div>
+                        <h4>Thông tin người dùng</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.UserId)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.UserId)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.FirstName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.FirstName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LastName)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.LastName)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Email)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Email)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Password)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Password)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.IsAdmin)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.IsAdmin)
+                            </dd>
+
+                        </dl>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Xoá" class="btn btn-default" />
+                                <button> @Html.ActionLink("Quay lại", "Index")</button>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

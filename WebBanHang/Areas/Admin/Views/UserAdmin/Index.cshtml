@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebBanHang.Context.Users_2119110325>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:5500px; margin-left:50px;">
+        <article class="card-body">
+            <div class="content-wrapper">
+                <header class="mb-4"><h4 class="text-danger">Trang quản lý người dùng</h4></header>
+                <div class="form-group">
+
+
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.UserId)
+
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FirstName)
+
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.LastName)
+
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Email)
+
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Password)
+
+                            </th>
+
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UserId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Password)
+                                </td>
+
+                                <td>
+                                    <button>@Html.ActionLink("Chi tiết", "Details", new { id = item.UserId })</button>
+                                    <button> @Html.ActionLink("Xoá", "Delete", new { id = item.UserId })</button>
+
+
+
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
