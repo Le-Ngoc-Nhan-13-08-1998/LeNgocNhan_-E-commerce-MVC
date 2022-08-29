@@ -29,22 +29,21 @@ namespace WebBanHang.Context
         [Required(ErrorMessage = "Chưa chọn giá đền xuất")]
         [Display(Name = "Giá đề xuất")]
         public Nullable<double> PriceDiscount { get; set; }
-        [Display(Name = "Số Id")]
+       
         public Nullable<int> TypeId { get; set; }
-        [Required(ErrorMessage = "Chưa nhập tên gọi")]
-        [Display(Name = "Tên gọi")]
+        
         public string Slug { get; set; }
-        [Display(Name = "Thương hiệu")]
+       
         public Nullable<int> BrandId { get; set; }
-        [Display(Name = "Có thể xoá")]
+       
         public Nullable<bool> Deleted { get; set; }
-        [Display(Name = "Hiển thị")]
+       
         public Nullable<bool> ShowHomePage { get; set; }
-        [Display(Name = "HIện đặt")]
+       
         public Nullable<int> DisplayOrder { get; set; }
-        [Display(Name = "Ngày thêm")]
+       
         public Nullable<System.DateTime> CreatedOnUtc { get; set; }
-        [Display(Name = "Ngày tạo")]
+        
         public Nullable<System.DateTime> UpdatedOnUtc { get; set; }
 
 
