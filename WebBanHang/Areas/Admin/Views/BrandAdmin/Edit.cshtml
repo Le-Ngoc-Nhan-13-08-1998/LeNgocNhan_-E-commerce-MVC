@@ -22,7 +22,7 @@
                             @Html.HiddenFor(model => model.Id)
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.Name, "Tên", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -30,14 +30,14 @@
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.Avatar, "Hình ảnh", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     <input type="file" name="ImageUpload" />
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.Slug, htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.Slug, "Thương hiệu", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.Slug, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.Slug, "", new { @class = "text-danger" })
@@ -45,14 +45,14 @@
                             </div>
 
                             <div class="form-group">
-                                @Html.LabelFor(model => model.ShowOnHomePage, htmlAttributes: new { @class = "control-label col-md-2" })
+                                @Html.LabelFor(model => model.ShowOnHomePage, "Hiện trang chủ", htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.ShowOnHomePage, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.ShowOnHomePage, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            @*<div class="form-group">
                                 @Html.LabelFor(model => model.DisplayOrder, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.DisplayOrder, new { htmlAttributes = new { @class = "form-control" } })
@@ -74,15 +74,15 @@
                                     @Html.EditorFor(model => model.UpdateUtc, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.UpdateUtc, "", new { @class = "text-danger" })
                                 </div>
-                            </div>
+                            </div>*@
 
-                            <div class="form-group">
+                            @*<div class="form-group">
                                 @Html.LabelFor(model => model.Deleted, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
                                     @Html.EditorFor(model => model.Deleted, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.Deleted, "", new { @class = "text-danger" })
                                 </div>
-                            </div>
+                            </div>*@
 
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">

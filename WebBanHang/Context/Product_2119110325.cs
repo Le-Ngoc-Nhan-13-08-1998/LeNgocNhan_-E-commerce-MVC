@@ -11,13 +11,17 @@ namespace WebBanHang.Context
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Xml.Linq;
 
     public partial class Product_2119110325
     {
         [NotMapped]
         public System.Web.HttpPostedFileBase ImageUpload { get; set; }
+
         public int Id { get; set; }
+  
         public string Name { get; set; }
         public string Avatar { get; set; }
         public Nullable<int> CategoryId { get; set; }
